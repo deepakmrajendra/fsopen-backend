@@ -1,0 +1,39 @@
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+    "name": "John Doe",
+    "number": "62-3424232"
+}
+
+###
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+    "name": "James Miller"
+}
+
+###
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+    "number": "92382-23123123"
+}
+
+###
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+###
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+    "name": "John Doe",
+    "number": "62-3424233"
+}
+
+###
+GET http://localhost:3001/api/persons
