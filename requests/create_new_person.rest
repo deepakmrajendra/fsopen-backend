@@ -1,4 +1,5 @@
-POST http://localhost:3001/api/persons
+# POST http://localhost:3001/api/persons
+POST https://exercisesbackendpart3.fly.dev/api/persons
 content-type: application/json
 
 {
@@ -7,7 +8,8 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:3001/api/persons
+# POST http://localhost:3001/api/persons
+POST https://exercisesbackendpart3.fly.dev/api/persons
 content-type: application/json
 
 {
@@ -15,7 +17,8 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:3001/api/persons
+# POST http://localhost:3001/api/persons
+POST https://exercisesbackendpart3.fly.dev/api/persons
 content-type: application/json
 
 {
@@ -23,11 +26,13 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:3001/api/persons
+# POST http://localhost:3001/api/persons
+POST https://exercisesbackendpart3.fly.dev/api/persons
 content-type: application/json
 
 ###
-POST http://localhost:3001/api/persons
+# POST http://localhost:3001/api/persons
+POST https://exercisesbackendpart3.fly.dev/api/persons
 content-type: application/json
 
 {
@@ -36,4 +41,5 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:3001/api/persons
+# GET http://localhost:3001/api/persons
+GET https://exercisesbackendpart3.fly.dev/api/persons

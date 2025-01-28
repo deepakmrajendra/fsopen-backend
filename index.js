@@ -25,6 +25,14 @@ let persons = [
     }
 ]
 
+// https://fullstackopen.com/en/part3/deploying_app_to_internet#frontend-production-build
+app.use(express.static('dist'))
+
+const cors = require('cors')
+
+// By default, app.use(cors()) allows requests from all origins (any domain can make requests to the backend)
+app.use(cors())
+
 app.use(express.json())
 
 // // Method 1 of using morgan middleware with 'tiny' configuration
@@ -71,10 +79,17 @@ app.get('/api/persons/:id', (request, response) => {
 
 app.delete('/api/persons/:id', (request, response) => {
     const id = request.params.id
+    const personToDelete = persons.find(person => person.id === id)
+
+    if (!personToDelete) {
+      return response.status(404).json({ error: 'Person not found' })
+    }
+
     persons = persons.filter(person => person.id !== id)
   
-    response.json(persons)
-    response.status(204).end()
+    // response.json(persons)
+    // response.status(204).end()
+    response.status(200).json(personToDelete)
 })
 
 
@@ -115,7 +130,8 @@ app.post('/api/persons', (request, response) => {
 })
 
 
-const PORT = 3001
+// const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
