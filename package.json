@@ -9,18 +9,25 @@
     "build:ui": "rm -rf dist && cd ../Exercises/part2/phonebook && npm run build && cp -r dist ../../../ExercisesBackendPart3",
     "deploy": "fly deploy",
     "deploy:full": "npm run build:ui && npm run deploy",
-    "logs:prod": "fly logs"
+    "logs:prod": "fly logs",
+    "lint": "eslint ."
   },
   "author": "Deepak Rajendrappa",
   "license": "MIT",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "mongoose": "^8.9.5",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
     "@flydotio/dockerfile": "^0.7.4",
+    "@stylistic/eslint-plugin-js": "^3.0.1",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
     "nodemon": "^3.1.9"
   }
 }
